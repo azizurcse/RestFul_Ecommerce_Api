@@ -17,7 +17,7 @@ class ProductCollection extends Resource
         return [
             'name'=>$this->name,
             'totalPrice'=>round((1-($this->discount/100)) * $this->price,2),
-            'rating'=>$this->reviews->count() > 0 ? round($this->reviews->sum('star')/$this->reviews->count()) : 'no rating yet',
+            'rating'=>$this->reviews->count() > 0 ? round($this->reviews->sum('star')/$this->reviews->count(),2) : 'no rating yet',
             'discount'=>$this->discount,
             'link'=>route('products.show',$this->id)
         ];
