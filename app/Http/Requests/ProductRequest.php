@@ -30,5 +30,7 @@ class ProductRequest extends FormRequest
             'stock'=>'required|max:6',
             'discount'=>'required|max:2',
         ];
+
+
     }
 }
