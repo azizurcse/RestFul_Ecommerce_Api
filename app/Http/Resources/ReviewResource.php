@@ -17,7 +17,7 @@ class ReviewResource extends Resource
         return
             [
                 'customer'=>$this->customer,
-                'body'=>$this->body,
+                'body'=>$this->review,
                 'star'=>$this->star
 
             ];
